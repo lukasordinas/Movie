@@ -1,8 +1,10 @@
 ﻿@page
-@model IndexModel
+@model MoviesModel
 @{
     ViewData["Title"] = "Movies";
 }
+
+@Html.AntiForgeryToken()
 
 <div id="movieSearch">
     <h1>Browse movies</h1>
@@ -22,5 +24,12 @@
         </div>
     </div>
 
-    <button id="searchButton" type="button" class="btn btn-primary btn-lg">Go</button>
+    <button id="searchButton" type="button" class="btn btn-primary btn-lg">Search</button>
 </div>
+
+<div id="movieResults" class="d-none">
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/movies.js" asp-append-version="true"></script>
