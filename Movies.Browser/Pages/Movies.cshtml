@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div id="movieSearch">
+    <h1>Browse movies</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="titleInput">Title</label>
+                <input type="text" class="form-control" id="titleInput" placeholder="">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="genreInput">Genre</label>
+                <input type="text" class="form-control" id="genreInput" placeholder="All">
+            </div>
+        </div>
+    </div>
+
+    <button id="searchButton" type="button" class="btn btn-primary btn-lg">Go</button>
+</div>

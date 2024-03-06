@@ -18,6 +18,7 @@ public record Movie(int ID, string Title, DateOnly ReleaseDate, string Overview,
     }
 }
 
+// TODO: Implement a shared and unit tested PagedResponse<T> base class for future reusability.
 public record MoviePagedResponse(int PageNumber, int PageSize, int TotalItems, IEnumerable<Movie> Items)
 {
     public static async Task<MoviePagedResponse> CreateAsync(int pageNumber, int pageSize, IQueryable<Data.Movies.Movie> query)
